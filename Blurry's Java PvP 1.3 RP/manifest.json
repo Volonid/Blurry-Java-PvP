@@ -1,13 +1,13 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "§l§eBlurry's Java PvP 1.2 §b(Resource)",
+		"name": "§l§eBlurry's Java PvP 1.3 §b(Resource)",
 		"description": "By BLURRY FACE",
 		"uuid": "e6950bcb-13d5-4b16-8220-545bc5b34845",
 		"version": [
 			1,
-			0,
-			3
+			3,
+			0
 		],
 		"min_engine_version": [
 			1,
