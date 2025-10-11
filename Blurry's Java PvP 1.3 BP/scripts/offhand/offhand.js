@@ -341,55 +341,8 @@ world.afterEvents.playerEmote.subscribe((event) => {
 
 function swapOffhand(player) {
   if (world.getDynamicProperty("offhand_food") === false) return;
-  const inventory = player.getComponent("minecraft:inventory").container;
-  const equippable = player.getComponent("minecraft:equippable");
-  const slot = player.selectedSlotIndex;
-  const mainHand = inventory.getItem(slot);
-  const offhand = equippable.getEquipment(EquipmentSlot.Offhand);
-
-
-  // If mainHand is empty and offhand is swappable, move offhand to main hand
-  if (!mainHand && offhand && (SWAPPABLE_EXTRA_IDS.includes(offhand.typeId) || offhand.hasTag("bf:shield") || SWAPPABLE_FOOD_IDS.includes(offhand.typeId) || SWAPPABLE_FOOD_IDS2.includes(offhand.typeId))) {
-    player.runCommand(`replaceitem entity @s slot.weapon.offhand 0 air`);
-    inventory.setItem(slot, offhand);
-    player.playSound("armor.equip_generic");
-    pendingSwapPlayers.delete(player.id);
-    return;
-  }
-
-  // If mainHand is swappable food or extra, move it to offhand
-  if (mainHand && (SWAPPABLE_EXTRA_IDS.includes(mainHand.typeId) || mainHand.hasTag("bf:shield") || SWAPPABLE_FOOD_IDS.includes(mainHand.typeId) || SWAPPABLE_FOOD_IDS2.includes(mainHand.typeId))) {
-    let swapType = mainHand.typeId;
-    // For food, use bf:<name>_offhand if in SWAPPABLE_FOOD_IDS
-    if (SWAPPABLE_FOOD_IDS.includes(mainHand.typeId)) {
-      const foodName = mainHand.typeId.split(":").pop();
-      const offhandId = `bf:${foodName}_offhand`;
-      swapType = offhandId;
-    }
-    // Shields and extras: direct swap
-    if (swapType === "minecraft:shield" || swapType === "bf:shield" || SWAPPABLE_EXTRA_IDS.includes(mainHand.typeId)) {
-      equippable.setEquipment(EquipmentSlot.Offhand, mainHand);
-    } else {
-      player.runCommand(`replaceitem entity @s slot.weapon.offhand 0 ${swapType} ${mainHand.amount}`);
-    }
-    if (offhand) {
-      inventory.setItem(slot, offhand);
-    } else {
-      inventory.setItem(slot, undefined);
-    }
-    player.playSound("armor.equip_generic");
-    pendingSwapPlayers.delete(player.id);
-    return;
-  }
-
-  // If offhand is swappable and mainHand is empty, move offhand to main hand
-  if (!mainHand && offhand && (SWAPPABLE_EXTRA_IDS.includes(offhand.typeId) || offhand.hasTag("bf:shield") || SWAPPABLE_FOOD_IDS.includes(offhand.typeId) || SWAPPABLE_FOOD_IDS2.includes(offhand.typeId))) {
-    player.runCommand(`replaceitem entity @s slot.weapon.offhand 0 air`);
-    inventory.setItem(slot, offhand);
-    player.playSound("armor.equip_generic");
-    pendingSwapPlayers.delete(player.id);
-    return;
-  }
+  if (!player) return;
+  pendingSwapPlayers.add(player.id);
 }
 
 system.beforeEvents.startup.subscribe((init) => {
