@@ -1,0 +1,20 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bf:shield17"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "bf:shield"
+			}
+		],
+		"result": {
+			"item": "bf:shield_nahidwin",
+			"count": 1
+		}
+	}
+}

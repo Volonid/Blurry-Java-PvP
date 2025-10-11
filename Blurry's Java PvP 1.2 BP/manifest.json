@@ -1,0 +1,75 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§l§eBlurry's Java PvP 1.2 §d(Behavior)",
+		"description": "By BLURRY FACE",
+		"uuid": "5c7592d3-e85c-420a-a0a3-008055ad20a8",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "023e231c-e8f1-4fae-8c8d-d9d1b33b9029",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "104013e9-c860-4003-b902-fd3706a08dee",
+			"version": [
+				1,
+				0,
+				0
+			],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "e6950bcb-13d5-4b16-8220-545bc5b34845",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.1.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		}
+	],
+	"metadata": {
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.51"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"settings": [
+		{
+			"type": "label",
+			"text": "§eCreator: §l§6Blurry FACE§r\n\n§dDevelopers:\n§6Blurry FACE\n§bBigGamers4u\n§fSeawhite\n§4Sith\n\n§f[§eReminder§f]\n§fThis pack supports §l§6Minecraft Version 1.21.0§r and higher.\n\nFound any bugs? Report them here and have fun chatting in the community §dhttps://discord.gg/GaaRNdrm6H§r\n\n// If you have any Shield Packs, make sure to turn §l§4CUSTOM SHILED OFF§r and the Shield Pack goes on top. \n\n // §l§6Blurry FACE\n§r§fhttps://www.curseforge.com/minecraft-bedrock/\naddons/blurrys-java-beta\n\n§l§bBigGamers4u\n// §r§fhttps://www.curseforge.com/members/biggamers4u/projects\n\n§l§fSeawhite\n§r§fhttps://www.curseforge.com/minecraft-bedrock/\n// addons/sweep-n-slash\n\n§l§4Sith\n§r§fhttps://discord.gg/yn4U8tU2Y8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n §7You have found a secret clip §fhttps://youtu.be/JLeOd7fT160"
+		}
+	]
+}

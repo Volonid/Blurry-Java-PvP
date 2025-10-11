@@ -1,0 +1,219 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.attacking": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacking": "variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scriptevent bf:attack_start"
+					]
+				},
+				"attacking": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scriptevent bf:attack"
+					]
+				}
+			}
+		},
+		"controller.animation.shield": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shield_mainhand_side": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.scoreboard('side_shield')==1"
+						},
+						{
+							"shield_offhand_side": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('side_shield')==1"
+						},
+						{
+							"shield_mainhand": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.is_using_item&&query.scoreboard('side_shield')==0"
+						},
+						{
+							"shield_offhand": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('side_shield')==0"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==1"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.player.shield_off a 10000000"
+					]
+				},
+				"shield_mainhand": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
+						},
+						{
+							"shield_mainhand_blocking": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.is_using_item&&query.equipped_item_any_tag('slot.weapon.mainhand',0,'bf:shield')&&query.scoreboard('shield_up')==1"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_main_hand_first_person2 a 10000000"
+					]
+				},
+				"shield_mainhand_side": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
+						},
+						{
+							"shield_mainhand_blocking": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.scoreboard('shield_up')==1"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_main_hand_first_person2_side a 10000000"
+					]
+				},
+				"shield_mainhand_blocking": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
+						},
+						{
+							"shield_mainhand": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.scoreboard('shield_up')==0&&query.scoreboard('side_shield')==0"
+						},
+						{
+							"shield_mainhand_side": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.scoreboard('shield_up')==0&&query.scoreboard('side_shield')==1"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_main_hand_first_person_blocking2 a 1000000"
+					]
+				},
+				"shield_offhand": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')"
+						},
+						{
+							"shield_offhand_blocking": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==1"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_off_hand_first_person2 a 10000000"
+					]
+				},
+				"shield_offhand_side": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')"
+						},
+						{
+							"shield_offhand_blocking": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==1"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_off_hand_first_person2_side a 10000000"
+					]
+				},
+				"shield_offhand_blocking": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')"
+						},
+						{
+							"shield_offhand": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==0&&query.scoreboard('side_shield')==0"
+						},
+						{
+							"shield_offhand_side": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==0&&query.scoreboard('side_shield')==1"
+						},
+						{
+							"shield_offhand_blocking_off": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==3"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s shield_offhand a 10000000"
+					]
+				},
+				"shield_offhand_blocking_off": {
+					"transitions": [
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')"
+						},
+						{
+							"shield_offhand": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==0"
+						},
+						{
+							"player_shield": "query.scoreboard('shield_up')==2"
+						}
+					],
+					"on_entry": [
+						"/playanimation @s animation.shield.wield_off_hand_first_person_blocking4 a 10000000"
+					]
+				},
+				"player_shield": {
+					"transitions": [
+						{
+							"shield_mainhand": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
+						},
+						{
+							"shield_offhand": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')"
+						},
+						{
+							"default": "!query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
+						},
+						{
+							"shield_mainhand_blocking": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.scoreboard('shield_up')==1"
+						},
+						{
+							"shield_offhand_blocking": "query.equipped_item_any_tag('slot.weapon.offhand','bf:shield')&&query.scoreboard('shield_up')==1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacking": "1"
+						}
+					],
+					"on_entry": [
+						"/scriptevent bf:player"
+					]
+				},
+				"attacking": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/scriptevent bf:player"
+					]
+				}
+			}
+		}
+	}
+}

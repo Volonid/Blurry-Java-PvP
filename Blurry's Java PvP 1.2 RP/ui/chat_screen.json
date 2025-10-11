@@ -1,0 +1,14 @@
+{
+  "messages_text": {
+    "bindings": [
+      { "binding_name": "#text" },
+      { "binding_name": "#chat_visible" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#text < 'notification.') or (#text > 'notification`')) and ((#text < 'toast.') or (#text > 'toast`')) and #chat_visible)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "chat_screen": { "close_on_player_hurt": false }
+}
