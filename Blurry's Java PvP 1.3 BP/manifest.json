@@ -21,7 +21,7 @@
 			"uuid": "023e231c-e8f1-4fae-8c8d-d9d1b33b9029",
 			"version": [
 				1,
-				0,
+				3,
 				0
 			]
 		},
@@ -31,7 +31,7 @@
 			"uuid": "104013e9-c860-4003-b902-fd3706a08dee",
 			"version": [
 				1,
-				0,
+				3,
 				0
 			],
 			"entry": "scripts/main.js"
@@ -39,10 +39,10 @@
 	],
 	"dependencies": [
 		{
-			"uuid": "e6950bcb-13d5-4b16-8220-545bc5b34845",
+			"uuid": "453c8164-ef03-4423-9c6a-d8fdf4a30c0e",
 			"version": [
 				1,
-				0,
+				3,
 				0
 			]
 		},
