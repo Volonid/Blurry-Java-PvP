@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_yellow"
 		},
 		"components": {
-			"minecraft:icon": "Yellow_Shield",
+			"minecraft:icon": "yellow_shield",
 			"minecraft:display_name": {
 				"value": "Yellow Shield"
 			},

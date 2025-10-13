@@ -117,8 +117,6 @@ world.afterEvents.itemCompleteUse.subscribe(event => {
   }
 });
 
-// itemCompleteUse is not needed for config UI or golden apple in beta, so it is removed.
-
 system.runInterval(() => {
   const isSaturationOn = world.getDynamicProperty("sat");
   if (!isSaturationOn) return;
@@ -173,6 +171,7 @@ world.afterEvents.worldLoad.subscribe(() => {
     if (world.getDynamicProperty("auto_sort") === undefined) world.setDynamicProperty("auto_sort", false);
     if (world.getDynamicProperty("auto_refill") === undefined) world.setDynamicProperty("auto_refill", false);
     if (world.getDynamicProperty("pickup_lock") === undefined) world.setDynamicProperty("pickup_lock", false);
+    if (world.getDynamicProperty("armor_repair") === undefined) world.setDynamicProperty("armor_repair", false);
     world.setDynamicProperty("player", false);
     world.sendMessage("§f§l/bf:admin_config §6to open the admin config.");
     world.getDimension("overworld").runCommand("gamerule naturalregeneration false");

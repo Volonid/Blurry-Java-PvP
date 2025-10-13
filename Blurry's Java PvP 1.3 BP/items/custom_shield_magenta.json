@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_magenta"
 		},
 		"components": {
-			"minecraft:icon": "Magenta_Shield",
+			"minecraft:icon": "magenta_shield",
 			"minecraft:display_name": {
 				"value": "Magenta Shield"
 			},

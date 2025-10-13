@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_black"
 		},
 		"components": {
-			"minecraft:icon": "Black_Shield",
+			"minecraft:icon": "black_shield",
 			"minecraft:display_name": {
 				"value": "Black Shield"
 			},

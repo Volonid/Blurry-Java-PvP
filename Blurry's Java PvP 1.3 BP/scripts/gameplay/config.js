@@ -27,6 +27,7 @@ let dynamicProperties = [
     { id: "death", name: "Death Message", value: true, category: "Features & Quality of Life" },
     { id: "op", name: "Extra Stuff", value: true, category: "Features & Quality of Life" },
     { id: "offhand_food", name: "Offhand Food", value: true, category: "Features & Quality of Life" },
+    { id: "armor_repair", name: "Armor Healing", value: false, category: "Features & Quality of Life" },
     { id: "auto_sort", name: "Auto Sort §a(New)", value: false, category: "Features & Quality of Life" },
     { id: "auto_refill", name: "Auto Hotbar Refill §a(New)", value: false, category: "Features & Quality of Life" },
     { id: "pickup_lock", name: "Pickup Lock §a(New) §4Clears Items", value: false, category: "Features & Quality of Life" },

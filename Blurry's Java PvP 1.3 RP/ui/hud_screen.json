@@ -1,4 +1,3 @@
-
 {
 	"test_panel": {
 		"type": "panel",
@@ -18,7 +17,7 @@
 		"type": "image",
 		"anchor_to": "center",
 		"anchor_from": "center",
-	   "texture": "textures/ui2/blank",
+		"texture": "textures/ui2/blank",
 		"size": [
 			"100%c + 10px",
 			"100%cm + 7px"
@@ -121,10 +120,8 @@
 			"100%",
 			"100%"
 		],
-		"max_children_size": 1,
 		"factory": {
 			"name": "chat_item_factory",
-			"max_children_size": 1,
 			"control_ids": {
 				"chat_item": "test_panel@hud.test_panel"
 			}
@@ -133,13 +130,13 @@
 	"root_panel": {
 		"modifications": [
 			{
-					"array_name": "controls",
-					"operation": "insert_front",
-					"value": [
-						{
-							"abcdave_factory3@hud.abcdave_factory3": {}
-						}
-					]
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"abcdave_factory3@hud.abcdave_factory3": {}
+					}
+				]
 			},
 			{
 				"array_name": "controls",
@@ -180,55 +177,57 @@
 		]
 	},
 	"hud_actionbar_text": {
-						"visible": "(('%.13s' * $actionbar_text) = 'notification.') = false",
-						"$actionbar_text": "$actionbar_text"
+		"visible": "(('%.13s' * $actionbar_text) = 'notification.') = false",
+		"$actionbar_text": "$actionbar_text"
 	},
 	"abcdave2": {
-			"type": "panel",
-			"anchor_from": "bottom_middle",
-			"anchor_to": "bottom_middle",
-			"size": [
-				"10px",
-				"5px"
-			],
-			"controls": [
-				{
-					"promo_text": {
-						"type": "label",
-						"visible": "(('%.13s' * $title_text) = 'notification.')",
-						"$title_text": "$title_text",
-						"text": "($title_text - ('%.13s' * $title_text))",
-						"anchor_from": "bottom_middle",
-						"anchor_to": "bottom_middle",
-						"shadow": false,
-						"layer": 998,
-						"font_scale_factor": 1,
-						"line_padding": -7,
-						"offset": [
-						   "-0.50px","-29.45px" 
-						]
-					}              
-				},
-				{
-					"promo_text": {
-						"type": "label",
-						"visible": "(('%.13s' * $subtitle_text) = 'notification.')",
-						"$subtitle_text": "$subtitle_text",
-						"text": "($subtitle_text - ('%.13s' * $subtitle_text))",
-						"anchor_from": "bottom_middle",
-						"anchor_to": "bottom_middle",
-						"shadow": false,
-						"layer": 998,
-						"font_scale_factor": 1,
-						"line_padding": -7,
-						"offset": [
-						   "-0.50px","-29.45px" 
-						]
-					}              
+		"type": "panel",
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"size": [
+			"10px",
+			"5px"
+		],
+		"controls": [
+			{
+				"abcdave2_promo_title": {
+					"type": "label",
+					"visible": "(('%.13s' * $title_text) = 'notification.')",
+					"$title_text": "$title_text",
+					"text": "($title_text - ('%.13s' * $title_text))",
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"shadow": false,
+					"layer": 998,
+					"font_scale_factor": 1,
+					"line_padding": -7,
+					"offset": [
+						"-0.50px",
+						"-29.45px"
+					]
 				}
-			]
-		},
-	   "abcdave_factory2": {
+			},
+			{
+				"abcdave2_promo_subtitle": {
+					"type": "label",
+					"visible": "(('%.13s' * $subtitle_text) = 'notification.')",
+					"$subtitle_text": "$subtitle_text",
+					"text": "($subtitle_text - ('%.13s' * $subtitle_text))",
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"shadow": false,
+					"layer": 998,
+					"font_scale_factor": 1,
+					"line_padding": -7,
+					"offset": [
+						"-0.50px",
+						"-29.45px"
+					]
+				}
+			}
+		]
+	},
+	"abcdave_factory2": {
 		"type": "panel",
 		"factory": {
 			"name": "hud_title_text_factory",
@@ -236,36 +235,37 @@
 				"hud_title_text": "abcdave2@hud.abcdave2"
 			}
 		}
-   },
-   "abcdave3": {
-			"type": "panel",
-			"anchor_from": "bottom_middle",
-			"anchor_to": "bottom_middle",
-			"size": [
-				"10px",
-				"5px"
-			],
-			"controls": [
-				{
-					"promo_text": {
-						"type": "label",
-						"visible": "(('%.13s' * $actionbar_text) = 'notification.')",
-						"$actionbar_text": "$actionbar_text",
-						"text": "($actionbar_text - ('%.13s' * $actionbar_text))",
-						"anchor_from": "bottom_middle",
-						"anchor_to": "bottom_middle",
-						"shadow": false,
-						"layer": 997,
-						"font_scale_factor": 1,
-						"line_padding": -7,
-						"offset": [
-						   "-0.50px","-29.45px" 
-						]
-					}              
+	},
+	"abcdave3": {
+		"type": "panel",
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"size": [
+			"10px",
+			"5px"
+		],
+		"controls": [
+			{
+				"abcdave3_promo_text": {
+					"type": "label",
+					"visible": "(('%.13s' * $actionbar_text) = 'notification.')",
+					"$actionbar_text": "$actionbar_text",
+					"text": "($actionbar_text - ('%.13s' * $actionbar_text))",
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"shadow": false,
+					"layer": 997,
+					"font_scale_factor": 1,
+					"line_padding": -7,
+					"offset": [
+						"-0.50px",
+						"-29.45px"
+					]
 				}
-			]
-		},
-	   "abcdave_factory3": {
+			}
+		]
+	},
+	"abcdave_factory3": {
 		"type": "panel",
 		"factory": {
 			"name": "hud_actionbar_text_factory",
@@ -273,37 +273,38 @@
 				"hud_actionbar_text": "abcdave3@hud.abcdave3"
 			}
 		}
-   },
+	},
 	"abcdave": {
-			"type": "panel",
-			"anchor_from": "center",
-			"anchor_to": "center",
-			"size": [
-				"10px",
-				"5px"
-			],
-			"controls": [
-				{
-					"promo_text": {
-						"type": "label",
-						"visible": "(('%.13s' * $title_text) = 'notificatiom.')",
-						"$title_text": "$title_text",
-						"text": "($title_text - ('%.13s' * $title_text))",
-						"anchor_from": "center",
-						"anchor_to": "center",
-						"alpha": 0.5,
-						"shadow": false,
-						"layer": 998,
-						"font_scale_factor": 0.5,
-						"line_padding": -7,
-						"offset": [
-						   "-1px","8px" 
-						]
-					}
+		"type": "panel",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"size": [
+			"10px",
+			"5px"
+		],
+		"controls": [
+			{
+				"abcdave_promo_text": {
+					"type": "label",
+					"visible": "(('%.13s' * $title_text) = 'notificatiom.')",
+					"$title_text": "$title_text",
+					"text": "($title_text - ('%.13s' * $title_text))",
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"alpha": 0.5,
+					"shadow": false,
+					"layer": 998,
+					"font_scale_factor": 0.5,
+					"line_padding": -7,
+					"offset": [
+						"-1px",
+						"8px"
+					]
 				}
-			]
-		},
-		"abcdave_factory": {
+			}
+		]
+	},
+	"abcdave_factory": {
 		"type": "panel",
 		"factory": {
 			"name": "hud_title_text_factory",
@@ -311,5 +312,5 @@
 				"hud_title_text": "abcdave@hud.abcdave"
 			}
 		}
-   }
+	}
 }

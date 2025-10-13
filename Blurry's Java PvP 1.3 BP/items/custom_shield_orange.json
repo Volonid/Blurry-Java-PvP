@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_orange"
 		},
 		"components": {
-			"minecraft:icon": "Orange_Shield",
+			"minecraft:icon": "orange_shield",
 			"minecraft:display_name": {
 				"value": "Orange Shield"
 			},

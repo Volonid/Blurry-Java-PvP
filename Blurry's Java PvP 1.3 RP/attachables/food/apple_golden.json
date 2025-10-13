@@ -20,14 +20,13 @@
         "eating_1st_pov": "animation.food.consumable_offhand.eating_1st_pov",
         "eating_movement": "animation.food.consumable_offhand.eating_movement",
         "controller_eating_pov": "controller.animation.food.consumable_offhand.comsuming",
-
         "m_consumable_1st_pov": "animation.food.consumable_mainhand.position_1st_pov_m",
         "m_consumable_3rd_pov": "animation.food.consumable_mainhand.position_3rd_pov_m",
         "m_eating_1st_pov": "animation.food.consumable_mainhand.eating_1st_pov_m",
         "m_eating_movement": "animation.food.consumable_mainhand.eating_movement_m",
         "m_controller_eating_pov": "controller.animation.food.consumable_mainhand.comsuming_m"
-    },
-    "scripts": {
+      },
+      "scripts": {
         "initialize": [
           "variable.time_consum_delay = 0.0;",
           "variable.mainhand = 0.0;",
@@ -39,21 +38,37 @@
           "variable.offhand = c.item_slot=='off_hand';"
         ],
         "animate": [
-            {"consumable_1st_pov":"variable.offhand && c.is_first_person"},
-            {"consumable_3rd_pov":"variable.offhand && !c.is_first_person"},
-            {"eating_movement":"variable.offhand && c.is_first_person && query.is_using_item && variable.time_consum_delay > 0.21 && query.equipped_item_any_tag('slot.weapon.mainhand', 0, 'minecraft:is_sword', 'minecraft:is_axe') && (query.property('bf:can_eat') != 0)"},
-            {"controller_eating_pov":"variable.offhand && c.is_first_person"},
-
-            
-            {"m_consumable_1st_pov":"variable.mainhand && c.is_first_person"},
-            {"m_consumable_3rd_pov":"variable.mainhand && !c.is_first_person"},
-            {"m_eating_movement":"variable.mainhand && c.is_first_person && query.main_hand_item_use_duration && variable.time_consum_delay > 0.21"},
-            {"m_eating_1st_pov":"variable.mainhand && c.is_first_person && query.main_hand_item_use_duration"}
-          ]
-        },
-        "render_controllers": [
-          {"controller.render.item_default":"variable.offhand"}
+          {
+            "consumable_1st_pov": "variable.offhand && c.is_first_person"
+          },
+          {
+            "consumable_3rd_pov": "variable.offhand && !c.is_first_person"
+          },
+          {
+            "eating_movement": "variable.offhand && c.is_first_person && query.is_using_item && variable.time_consum_delay > 0.21 && (query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_sword') || query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_axe')) && (query.property('bf:can_eat') != 0)"
+          },
+          {
+            "controller_eating_pov": "variable.offhand && c.is_first_person"
+          },
+          {
+            "m_consumable_1st_pov": "variable.mainhand && c.is_first_person"
+          },
+          {
+            "m_consumable_3rd_pov": "variable.mainhand && !c.is_first_person"
+          },
+          {
+            "m_eating_movement": "variable.mainhand && c.is_first_person && query.main_hand_item_use_duration && variable.time_consum_delay > 0.21"
+          },
+          {
+            "m_eating_1st_pov": "variable.mainhand && c.is_first_person && query.main_hand_item_use_duration"
+          }
         ]
-      }
+      },
+      "render_controllers": [
+        {
+          "controller.render.item_default": "variable.offhand"
+        }
+      ]
     }
   }
+}

@@ -57,7 +57,7 @@
 							"default": "!query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')"
 						},
 						{
-							"shield_mainhand_blocking": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.is_using_item&&query.equipped_item_any_tag('slot.weapon.mainhand',0,'bf:shield')&&query.scoreboard('shield_up')==1"
+							"shield_mainhand_blocking": "query.equipped_item_any_tag('slot.weapon.mainhand','bf:shield')&&query.is_using_item&&query.scoreboard('shield_up')==1"
 						},
 						{
 							"player_shield": "query.scoreboard('shield_up')==2"

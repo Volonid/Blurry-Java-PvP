@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_cyan"
 		},
 		"components": {
-			"minecraft:icon": "Cyan_Shield",
+			"minecraft:icon": "cyan_shield",
 			"minecraft:display_name": {
 				"value": "Cyan Shield"
 			},

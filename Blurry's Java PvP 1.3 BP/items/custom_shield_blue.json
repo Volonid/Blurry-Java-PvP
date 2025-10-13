@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_blue"
 		},
 		"components": {
-			"minecraft:icon": "Blue_Shield",
+			"minecraft:icon": "blue_shield",
 			"minecraft:display_name": {
 				"value": "Blue Shield"
 			},

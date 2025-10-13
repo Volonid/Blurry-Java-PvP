@@ -22,79 +22,79 @@
                 "textures/items/nahidwin_sheild"
             ]
         },
-        "Blue_Shield": {
+        "blue_shield": {
             "textures": [
-                "textures/items/Blue_Shield"
+                "textures/items/blue_shield"
             ]
         },
         "Black_Shield": {
             "textures": [
-                "textures/items/Black_Shield"
+                "textures/items/black_shield"
             ]
         },
         "Brown_Shield": {
             "textures": [
-                "textures/items/Brown_Shield"
+                "textures/items/brown_shield"
             ]
         },
         "Cyan_Shield": {
             "textures": [
-                "textures/items/Cyan_Shield"
+                "textures/items/cyan_shield"
             ]
         },
         "Gray_Shield": {
             "textures": [
-                "textures/items/Gray_Shield"
+                "textures/items/gray_shield"
             ]
         },
         "Green_Shield": {
             "textures": [
-                "textures/items/Green_Shield"
+                "textures/items/green_shield"
             ]
         },
         "Light_Blue_Shield": {
             "textures": [
-                "textures/items/Light_Blue_Shield"
+                "textures/items/light_blue_shield"
             ]
         },
         "Light_Gray_Shield": {
             "textures": [
-                "textures/items/Light_Gray_Shield"
+                "textures/items/light_gray_shield"
             ]
         },
         "Lime_Shield": {
             "textures": [
-                "textures/items/Lime_Shield"
+                "textures/items/lime_shield"
             ]
         },
         "Magenta_Shield": {
             "textures": [
-                "textures/items/Magenta_Shield"
+                "textures/items/magenta_shield"
             ]
         },
         "Orange_Shield": {
             "textures": [
-                "textures/items/Orange_Shield"
+                "textures/items/orange_shield"
             ]
         },
         "Pink_Shield": {
             "textures": [
-                "textures/items/Pink_Shield"
+                "textures/items/pink_shield"
             ]
         },
         "Purple_Shield": {
             "textures": [
-                "textures/items/Purple_Shield"
+                "textures/items/purple_shield"
             ]
         },
         "Red_Shield": {
             "textures": [
-                "textures/items/Red_Shield"
+                "textures/items/red_shield"
             ]
         },
         "Yellow_Shield": {
             "textures": [
-                "textures/items/Yellow_Shield"
+                "textures/items/yellow_shield"
             ]
         },
         "copper_axe": {

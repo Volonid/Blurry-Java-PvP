@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_purple"
 		},
 		"components": {
-			"minecraft:icon": "Purple_Shield",
+			"minecraft:icon": "purple_shield",
 			"minecraft:display_name": {
 				"value": "Purple Shield"
 			},

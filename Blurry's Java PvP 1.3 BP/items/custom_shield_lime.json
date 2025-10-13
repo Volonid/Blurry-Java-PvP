@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_lime"
 		},
 		"components": {
-			"minecraft:icon": "Lime_Shield",
+			"minecraft:icon": "lime_shield",
 			"minecraft:display_name": {
 				"value": "Lime Shield"
 			},

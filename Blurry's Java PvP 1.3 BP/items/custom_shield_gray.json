@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_gray"
 		},
 		"components": {
-			"minecraft:icon": "Gray_Shield",
+			"minecraft:icon": "gray_shield",
 			"minecraft:display_name": {
 				"value": "Gray Shield"
 			},

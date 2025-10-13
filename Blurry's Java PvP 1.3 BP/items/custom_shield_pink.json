@@ -5,7 +5,7 @@
 			"identifier": "bf:shield_pink"
 		},
 		"components": {
-			"minecraft:icon": "Pink_Shield",
+			"minecraft:icon": "pink_shield",
 			"minecraft:display_name": {
 				"value": "Pink Shield"
 			},

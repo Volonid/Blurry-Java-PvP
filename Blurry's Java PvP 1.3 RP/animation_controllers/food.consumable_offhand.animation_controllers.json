@@ -4,12 +4,9 @@
 		"controller.animation.food.consumable_offhand.comsuming": {
 			"states": {
 				"default": {
-					"animations": [
-						"position_1st_pov"
-					],
 					"transitions": [
 						{
-							"comsum": "query.main_hand_item_use_duration&&query.equipped_item_any_tag('slot.weapon.mainhand',0,'minecraft:is_sword','minecraft:is_axe')&&(query.property('bf:can_eat')!=0)"
+							"comsum": "query.main_hand_item_use_duration&&(query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_sword')||query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_axe'))&&(query.property('bf:can_eat')!=0)"
 						}
 					],
 					"blend_transition": 0.1
@@ -20,7 +17,7 @@
 					],
 					"transitions": [
 						{
-							"default": "!(query.main_hand_item_use_duration&&query.equipped_item_any_tag('slot.weapon.mainhand',0,'minecraft:is_sword','minecraft:is_axe'))"
+							"default": "!(query.main_hand_item_use_duration&&(query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_sword')||query.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_axe')))"
 						}
 					]
 				}
