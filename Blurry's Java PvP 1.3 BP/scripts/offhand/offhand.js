@@ -130,7 +130,7 @@ const food = {
   },
   "golden_apple": {
     hunger: 4, saturation: 9.6, canEatAtFull: true, effects: [
-      { effect: "regeneration", duration: 100, amplifier: 1 },
+      { effect: "regeneration", duration: 100, amplifier: 0 }, // fixed this
       { effect: "absorption", duration: 0, amplifier: 0, clear: true },
       { effect: "absorption", duration: 2400, amplifier: 0 }
     ]
